@@ -65,41 +65,41 @@ type OASummaryList struct {
 // OAContentValue 控件值 ，需在此为申请人在各个控件中填写内容不同控件有不同的赋值参数，具体说明详见附录。模板配置的控件属性为必填时，对应value值需要有值。
 type OAContentValue struct {
 	// Text 文本/多行文本控件（control参数为Text或Textarea）
-	Text string `json:"text"`
+	Text string `json:"text,omitempty"`
 	// Number 数字控件（control参数为Number）
-	Number string `json:"new_number"`
+	Number string `json:"new_number,omitempty"`
 	// Money 金额控件（control参数为Money）
-	Money string `json:"new_money"`
+	Money string `json:"new_money,omitempty"`
 	// Date 日期/日期+时间控件（control参数为Date）
-	Date OAContentDate `json:"date"`
+	Date OAContentDate `json:"date,omitempty"`
 	// Selector 单选/多选控件（control参数为Selector）
-	Selector OAContentSelector `json:"selector"`
+	Selector OAContentSelector `json:"selector,omitempty"`
 	// Members 成员控件（control参数为Contact，且value参数为members）
-	Members []OAContentMember `json:"members"`
+	Members []OAContentMember `json:"members,omitempty"`
 	// Departments 部门控件（control参数为Contact，且value参数为departments）
-	Departments []OAContentDepartment `json:"departments"`
+	Departments []OAContentDepartment `json:"departments,omitempty"`
 	// Tips 说明文字控件（control参数为Tips）
-	Tips OATemplateControlConfigTips `json:"new_tips"`
+	Tips OATemplateControlConfigTips `json:"new_tips,omitempty"`
 	// Files 附件控件（control参数为File，且value参数为files）
-	Files []OAContentFile `json:"files"`
+	Files []OAContentFile `json:"files,omitempty"`
 	// Table 明细控件（control参数为Table）
-	Table []OAContentTableList `json:"children"`
+	Table []OAContentTableList `json:"children,omitempty"`
 	// Vacation 假勤组件-请假组件（control参数为Vacation）
-	Vacation OAContentVacation `json:"vacation"`
+	Vacation OAContentVacation `json:"vacation,omitempty"`
 	// Attendance 假勤组件-出差/外出/加班组件（control参数为Attendance）
-	Attendance OAContentVacationAttendance `json:"attendance"`
+	Attendance OAContentVacationAttendance `json:"attendance,omitempty"`
 	// PunchCorrection 假勤组件-出差/外出/加班组件（control参数为Attendance）
-	PunchCorrection OAContentPunchCorrection `json:"punch_correction"`
+	PunchCorrection OAContentPunchCorrection `json:"punch_correction,omitempty"`
 	// Location 位置控件（control参数为Location，且value参数为location）
-	Location OAContentLocation `json:"location"`
+	Location OAContentLocation `json:"location,omitempty"`
 	// RelatedApproval 关联审批单控件（control参数为RelatedApproval，且value参数为related_approval）
-	RelatedApproval []OAContentRelatedApproval `json:"related_approval"`
+	RelatedApproval []OAContentRelatedApproval `json:"related_approval,omitempty"`
 	// Formula 公式控件（control参数为Formula，且value参数为formula）
-	Formula OAContentFormula `json:"formula"`
+	Formula OAContentFormula `json:"formula,omitempty"`
 	// DateRange 时长组件（control参数为DateRange，且value参数为date_range）
-	DateRange OAContentDateRange `json:"date_range"`
+	DateRange OAContentDateRange `json:"date_range,omitempty"`
 	// BankAccount 收款账户控件（control参数为BankAccount）
-	BankAccount OAContentBankAccount `json:"bank_account"`
+	BankAccount OAContentBankAccount `json:"bank_account,omitempty"`
 }
 
 // OAContentDate 日期/日期+时间内容
